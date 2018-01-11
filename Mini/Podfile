@@ -6,8 +6,9 @@ target 'Mini' do
   use_frameworks!
 
   # Pods for Mini
-pod ‘Alamofire’
-pod ’SnapKit’
-pod ‘SwiftyJSON’
+pod 'Alamofire’
+pod 'SnapKit’
+pod 'SwiftyJSON'
+pod 'RxSwift'
 
 end

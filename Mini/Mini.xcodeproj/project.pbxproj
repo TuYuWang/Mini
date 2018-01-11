@@ -13,6 +13,10 @@
 		04AB7E2F20065EFC006C5098 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04AB7E2E20065EFC006C5098 /* Assets.xcassets */; };
 		04AB7E3220065EFC006C5098 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04AB7E3020065EFC006C5098 /* LaunchScreen.storyboard */; };
 		2BE1C16226A003FDD666F5BB /* Pods_Mini.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 188E8DE8E30675888E3E6B53 /* Pods_Mini.framework */; };
+		E9DD73DC200766DD008B50EF /* Utility+FitScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DD73D8200766DD008B50EF /* Utility+FitScreen.swift */; };
+		E9DD73DD200766DD008B50EF /* Utility+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DD73D9200766DD008B50EF /* Utility+String.swift */; };
+		E9DD73DE200766DD008B50EF /* Utility+Verify.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DD73DA200766DD008B50EF /* Utility+Verify.swift */; };
+		E9DD73DF200766DD008B50EF /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DD73DB200766DD008B50EF /* Utility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		188E8DE8E30675888E3E6B53 /* Pods_Mini.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mini.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		921A27A943EC109ACBEB80A8 /* Pods-Mini.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mini.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mini/Pods-Mini.debug.xcconfig"; sourceTree = "<group>"; };
 		CAAA3AFE264C4CC1C37F9013 /* Pods-Mini.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mini.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mini/Pods-Mini.release.xcconfig"; sourceTree = "<group>"; };
+		E9DD73D8200766DD008B50EF /* Utility+FitScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Utility+FitScreen.swift"; sourceTree = "<group>"; };
+		E9DD73D9200766DD008B50EF /* Utility+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Utility+String.swift"; sourceTree = "<group>"; };
+		E9DD73DA200766DD008B50EF /* Utility+Verify.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Utility+Verify.swift"; sourceTree = "<group>"; };
+		E9DD73DB200766DD008B50EF /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +77,7 @@
 		04AB7E2620065EFC006C5098 /* Mini */ = {
 			isa = PBXGroup;
 			children = (
+				E9DD73D7200766DD008B50EF /* Utility */,
 				04AB7E2720065EFC006C5098 /* AppDelegate.swift */,
 				04AB7E2920065EFC006C5098 /* ViewController.swift */,
 				04AB7E2B20065EFC006C5098 /* Main.storyboard */,
@@ -86,6 +95,17 @@
 				CAAA3AFE264C4CC1C37F9013 /* Pods-Mini.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		E9DD73D7200766DD008B50EF /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				E9DD73D8200766DD008B50EF /* Utility+FitScreen.swift */,
+				E9DD73D9200766DD008B50EF /* Utility+String.swift */,
+				E9DD73DA200766DD008B50EF /* Utility+Verify.swift */,
+				E9DD73DB200766DD008B50EF /* Utility.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,12 +187,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Mini/Pods-Mini-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
@@ -222,7 +244,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				04AB7E2A20065EFC006C5098 /* ViewController.swift in Sources */,
+				E9DD73DE200766DD008B50EF /* Utility+Verify.swift in Sources */,
+				E9DD73DF200766DD008B50EF /* Utility.swift in Sources */,
+				E9DD73DD200766DD008B50EF /* Utility+String.swift in Sources */,
 				04AB7E2820065EFC006C5098 /* AppDelegate.swift in Sources */,
+				E9DD73DC200766DD008B50EF /* Utility+FitScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
