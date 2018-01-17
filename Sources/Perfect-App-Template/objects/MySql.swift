@@ -86,7 +86,7 @@ var BaseResponseJson: [String: Any] = [ResutlListKey: [],
 
 ///数据库基类
 class BaseOperator {
-    let dataBaseName = "Test"
+    let dataBaseName = "Mini"
     var mysql: MySQL {
         get {
             return MySql.shareInstance(dataBaseName: dataBaseName)
@@ -156,14 +156,17 @@ class UserOperator: BaseOperator {
     }
     
     func queryUserInfo(userName: String) -> String? {
-        let statement = "select id, username, password, create_time from user where username='\(userName)'"
+        let statement = "select id, username, password, create_time from user where username = '\(userName)'"
         
         LogFile.info("执行SQL: \(statement)")
         
         if !mysql.query(statement: statement) {
-            self.responseJson[ResuslKey] = RequestResultFailure
-            self.responseJson[ErrorMessageKey] = "查询失败"
+//            self.responseJson[ResuslKey] = RequestResultFailure
+//            self.responseJson[ErrorMessageKey] = "查询失败"
             LogFile.error("SQL: \(statement) 查询失败")
+        
+            return nil
+
         } else {
             LogFile.info("SQL: \(statement) 查询成功")
             

@@ -43,5 +43,8 @@ func mainRoutes() -> [[String: Any]] {
     // Database - queryUserInfo
     routes.append(["method":"update", "uri":"/query", "handler":Handlers.create])
     
+    //regiseter
+    routes.append(["method": "get", "uri": "/regist", "handler":Handlers.regist])
+    
 	return routes
 }

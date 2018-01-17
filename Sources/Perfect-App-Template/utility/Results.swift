@@ -15,7 +15,7 @@ fileprivate let msgKey  = "msg"
 struct Results {
 
     var data: dictionary?
-    var code: String
+    var code: Int
     var msg : String
     
     public var result: dictionary? {
@@ -32,7 +32,20 @@ struct Results {
 
 extension Results: JSONConvertible {
     func jsonEncodedString() throws -> String {
-        
+        var s = "{"
+        var first = true
+        for (k, v) in self.result! {
+            if !first {
+                s.append(",")
+            } else {
+                first = false
+            }
+            s.append(try k.jsonEncodedString())
+            s.append(":")
+            s.append(String(describing: v))
+        }
+        s.append("}")
+        return s
     }
     
     
